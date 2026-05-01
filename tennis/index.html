@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Tennis & Padel Schedule!</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500&family=Inter:wght@300&display=swap" rel="stylesheet">
+<style>
+
+body{
+margin:0;
+background:#072f2c;
+color:#f3f3f3;
+font-family:Inter;
+}
+
+/* HERO */
+
+.hero{
+height:35vh;
+background-image:
+linear-gradient(rgba(7,47,44,0.6),rgba(7,47,44,0.9)),
+url("https://images.unsplash.com/photo-1542144582-1ba00456b5e3");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.hero h1{
+font-family:"Cormorant Garamond";
+font-size:72px;
+font-weight:300;
+letter-spacing:8px;
+}
+
+/* SECTION */
+
+.section{
+max-width:900px;
+margin:auto;
+padding:80px 30px;
+}
+
+.section-title{
+font-family:"Cormorant Garamond";
+font-size:34px;
+text-align:center;
+margin-bottom:20px;
+}
+
+.countdown{
+text-align:center;
+margin-bottom:30px;
+color:#c6a56a;
+font-size:18px;
+}
+
+.divider{
+height:1px;
+background:#c6a56a;
+margin:40px 0;
+}
+
+/* FILTER */
+
+.filters{
+text-align:center;
+margin-bottom:40px;
+}
+
+.filters label{
+margin:0 15px;
+font-size:16px;
+}
+
+/* TABLE */
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th{
+text-align:left;
+font-weight:300;
+padding:15px 0;
+border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+td{
+padding:15px 0;
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+/* highlight next match */
+
+.highlight{
+background:rgba(198,165,106,0.15);
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:40px;
+opacity:0.6;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+.hero h1{
+font-size:40px;
+letter-spacing:5px;
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="hero">
+<h1>
+TENNIS & PADEL<br>
+SCHEDULE!
+</h1>
+</div>
+
+<div class="section">
+
+<div class="section-title">
+Upcoming Matches
+</div>
+
+<div class="countdown" id="countdown" aria-live="polite"></div>
+
+<div class="divider"></div>
+
+<div class="filters">
+<label><input type="checkbox" id="tennisFilter" checked> Tennis</label>
+<label><input type="checkbox" id="padelFilter" checked> Padel</label>
+</div>
+
+<table id="schedule">
+<thead>
+<tr>
+<th>Date</th>
+<th>Players</th>
+<th>Sport</th>
+</tr>
+</thead>
+
+<tbody>
+<!-- leeg laten -->
+</tbody>
+
+</table>
+
+<footer>Door Willem Tijm 2026</footer>
+<script src="code.js" defer></script>
+</body>
+</html>
