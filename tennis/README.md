@@ -5,8 +5,11 @@ Kleine front-end demo die wedstrijden uit `schema.txt` laadt, toont in een tabel
 ## Bestanden
 
 - `index.html` - pagina en styling
-- `code.ts` - TypeScript broncode
+- `schema-editor.html` - beheerpagina voor `schema.txt` (laden, bewerken, downloaden)
+- `code.ts` - TypeScript broncode voor de planning
 - `code.js` - gegenereerde JavaScript output
+- `schema-editor.ts` - TypeScript voor de beheerpagina
+- `schema-editor.js` - gegenereerde JavaScript voor de beheerpagina
 - `schema.txt` - data (CSV-achtig formaat)
 
 ## Vereisten
@@ -33,7 +36,8 @@ npm --prefix tennis run serve
 
 Open daarna:
 
-- [http://localhost:5500/index.html](http://localhost:5500/index.html)
+- [http://localhost:5500/index.html](http://localhost:5500/index.html) (planning)
+- [http://localhost:5500/schema-editor.html](http://localhost:5500/schema-editor.html) (`schema.txt` beheren)
 
 ## Compile TypeScript naar JavaScript
 
@@ -66,6 +70,13 @@ python3 -m http.server 5500
 Open daarna:
 
 - [http://localhost:5500/tennis/index.html](http://localhost:5500/tennis/index.html)
+- [http://localhost:5500/tennis/schema-editor.html](http://localhost:5500/tennis/schema-editor.html) (bewerk `schema.txt`)
+
+## schema.txt beheren
+
+Open `schema-editor.html` in de browser (via dezelfde HTTP-server als de planning). De pagina laadt `schema.txt`, je past de tekst aan, en gebruikt **Download schema.txt** om een nieuw bestand op te slaan.
+
+Omdat dit een statische site is, kan de browser **`schema.txt` op de server niet overschrijven**. Na download vervang je lokaal het bestand `tennis/schema.txt` (en commit/push of upload opnieuw bij Firebase).
 
 ## Dataformaat
 

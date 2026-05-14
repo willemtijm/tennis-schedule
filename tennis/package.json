@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "mkdir -p .types && npx tsc \"code.ts\" --target es2017 --lib dom,es2017 --module none --skipLibCheck --typeRoots \".types\" --outFile \"code.js\" && rmdir .types",
+    "build": "mkdir -p .types && npx tsc \"code.ts\" --target es2017 --lib dom,es2017 --module none --skipLibCheck --typeRoots \".types\" --outFile \"code.js\" && npx tsc \"schema-editor.ts\" --target es2017 --lib dom,es2017 --module none --skipLibCheck --typeRoots \".types\" --outFile \"schema-editor.js\" && rmdir .types",
     "serve": "python3 -m http.server 5500"
   }
 }

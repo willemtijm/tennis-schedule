@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>schema.txt beheren</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500&family=Inter:wght@300&display=swap" rel="stylesheet">
+<style>
+
+body{
+margin:0;
+background:#072f2c;
+color:#f3f3f3;
+font-family:Inter;
+}
+
+/* HERO */
+
+.hero{
+height:35vh;
+background-image:
+linear-gradient(rgba(7,47,44,0.6),rgba(7,47,44,0.9)),
+url("https://images.unsplash.com/photo-1542144582-1ba00456b5e3");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.hero h1{
+font-family:"Cormorant Garamond";
+font-size:72px;
+font-weight:300;
+letter-spacing:8px;
+}
+
+/* SECTION */
+
+.section{
+max-width:900px;
+margin:auto;
+padding:80px 30px;
+}
+
+.section-title{
+font-family:"Cormorant Garamond";
+font-size:34px;
+text-align:center;
+margin-bottom:20px;
+}
+
+.countdown{
+text-align:center;
+margin-bottom:30px;
+color:#c6a56a;
+font-size:18px;
+}
+
+.countdown code{
+font-family:ui-monospace,monospace;
+font-size:0.95em;
+color:#f3f3f3;
+opacity:0.95;
+}
+
+.divider{
+height:1px;
+background:#c6a56a;
+margin:40px 0;
+}
+
+/* TOOLBAR (zelfde ritme als .filters) */
+
+.toolbar{
+text-align:center;
+margin-bottom:40px;
+}
+
+.toolbar button{
+background:transparent;
+color:#f3f3f3;
+border:none;
+border-bottom:1px solid rgba(255,255,255,0.2);
+padding:15px 18px;
+margin:0 8px;
+font-family:Inter;
+font-weight:300;
+font-size:16px;
+cursor:pointer;
+}
+
+.toolbar button:hover{
+color:#c6a56a;
+border-bottom-color:#c6a56a;
+}
+
+.toolbar #status{
+display:block;
+margin-top:24px;
+min-height:1.2em;
+color:#c6a56a;
+font-size:18px;
+}
+
+textarea#schemaContent{
+width:100%;
+min-height:420px;
+box-sizing:border-box;
+background:transparent;
+color:#f3f3f3;
+border:none;
+border-top:1px solid rgba(255,255,255,0.2);
+border-bottom:1px solid rgba(255,255,255,0.08);
+padding:15px 0;
+font-family:ui-monospace,monospace;
+font-size:14px;
+font-weight:300;
+line-height:1.6;
+resize:vertical;
+}
+
+.hint{
+margin-top:30px;
+text-align:center;
+font-size:16px;
+font-weight:300;
+opacity:0.75;
+line-height:1.6;
+}
+
+.hint code{
+font-family:ui-monospace,monospace;
+font-size:0.9em;
+color:#f3f3f3;
+opacity:0.9;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:40px;
+opacity:0.6;
+}
+
+footer a{
+color:#c6a56a;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+.hero h1{
+font-size:40px;
+letter-spacing:5px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+<h1>
+SCHEMA<br>
+BEHEREN
+</h1>
+</div>
+
+<div class="section">
+
+<div class="section-title">
+schema.txt
+</div>
+
+<div class="countdown" id="intro">
+Bewerk de inhoud hieronder. Opslaan gaat via download: vervang daarna <code>schema.txt</code> in je project (of upload opnieuw bij hosting).
+</div>
+
+<div class="divider"></div>
+
+<div class="toolbar">
+<button type="button" id="btnLoad">Opnieuw laden</button>
+<button type="button" id="btnDownload">Download schema.txt</button>
+<button type="button" id="btnCopy">Kopieer alles</button>
+<span id="status" aria-live="polite"></span>
+</div>
+
+<textarea id="schemaContent" spellcheck="false" aria-label="Inhoud van schema.txt"></textarea>
+
+<p class="hint">Eerste regel: <code>date,players,sport</code>. Daarna per regel: <code>2026-05-18,Jan en Piet,tennis</code>. Gebruik een HTTP-server (bijv. <code>npm run serve</code>) zodat laden werkt.</p>
+
+<footer>
+<a href="index.html">← Terug naar planning</a>
+</footer>
+
+</div>
+
+<script src="schema-editor.js" defer></script>
+</body>
+</html>
