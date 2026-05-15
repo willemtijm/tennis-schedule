@@ -24,7 +24,7 @@ function setStatusMessage(message: string): void {
 
 async function loadData(): Promise<Match[]> {
   try {
-    const response = await fetch(SHEET);
+    const response = await fetch(SHEET, { cache: "no-store" });
     if (!response.ok) {
       throw new Error(`Could not load ${SHEET} (${response.status})`);
     }
@@ -161,7 +161,7 @@ function initLogic(): void {
         (1000 * 60 * 60 * 24)
       );
 
-      setStatusMessage(`Next match in ${diff} day(s)`);
+      setStatusMessage(`Volgende wedstrijd in ${diff} dag(en)`);
     } else {
       setStatusMessage("");
     }

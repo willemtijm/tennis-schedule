@@ -16,7 +16,7 @@ async function loadSchema() {
         return;
     }
     try {
-        const response = await fetch(SHEET);
+        const response = await fetch(SHEET, { cache: "no-store" });
         if (!response.ok) {
             throw new Error(`HTTP ${response.status}`);
         }
