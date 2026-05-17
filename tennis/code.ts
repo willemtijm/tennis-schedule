@@ -161,7 +161,7 @@ function initLogic(): void {
         (1000 * 60 * 60 * 24)
       );
 
-      setStatusMessage(`Volgende wedstrijd in ${diff} dag(en)`);
+      setStatusMessage(`Volgende wedstrijd binnen ${diff} dag(en)`);
     } else {
       setStatusMessage("");
     }
@@ -179,7 +179,7 @@ function initLogic(): void {
 
 function formatDate(dateStr: string): string {
   const date = new Date(dateStr);
-  return date.toLocaleDateString("en-GB", {
+  return date.toLocaleDateString("nl-NL", {
     day: "numeric",
     month: "long"
   });

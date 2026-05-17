@@ -112,7 +112,7 @@ function initLogic() {
             nextMatch.row.classList.add("highlight");
             const diff = Math.ceil((nextMatch.date.getTime() - today.getTime()) /
                 (1000 * 60 * 60 * 24));
-            setStatusMessage(`Volgende wedstrijd in ${diff} dag(en)`);
+            setStatusMessage(`Volgende wedstrijd binnen ${diff} dag(en)`);
         }
         else {
             setStatusMessage("");
@@ -127,7 +127,7 @@ function initLogic() {
 /* ---------------- HELPERS ---------------- */
 function formatDate(dateStr) {
     const date = new Date(dateStr);
-    return date.toLocaleDateString("en-GB", {
+    return date.toLocaleDateString("nl-NL", {
         day: "numeric",
         month: "long"
     });

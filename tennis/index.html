@@ -49,7 +49,7 @@ padding:80px 30px;
 
 .section-title{
 font-family:"Cormorant Garamond";
-font-size:34px;
+font-size:28px;
 text-align:center;
 margin-bottom:20px;
 }
@@ -134,15 +134,40 @@ letter-spacing:5px;
 <div class="hero">
 <h1>
 TENNIS & PADEL<br>
-SCHEMA!
+SCHEMA
 </h1>
 </div>
 
 <div class="section">
 
+<!--div class="section-title">
+    <script>
+        document.getElementById('vandaag').textContent = netteDatum;
+    </script>
+    Komende Wedstrijden
+</div-->
+
 <div class="section-title">
-Komende Wedstrijden
+    <script>
+        const vandaag = new Date();
+
+        const opties = {
+            weekday: 'long',
+            day: 'numeric',
+            month: 'long'
+        };
+
+        let datumTekst = vandaag.toLocaleDateString('nl-NL', opties);
+
+        // Eerste letter hoofdletter
+        datumTekst = datumTekst.charAt(0).toLowerCase() + datumTekst.slice(1);
+
+        document.write('Het is nu ' + datumTekst);
+        </script>
+
 </div>
+
+
 
 <div class="countdown" id="countdown" aria-live="polite"></div>
 
