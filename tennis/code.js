@@ -135,7 +135,25 @@ function formatDate(dateStr) {
 function capitalize(text) {
     return text.charAt(0).toUpperCase() + text.slice(1);
 }
+function renderToday() {
+    const el = document.getElementById("today");
+    if (!el)
+        return;
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, "0");
+    const day = String(today.getDate()).padStart(2, "0");
+    el.setAttribute("datetime", `${year}-${month}-${day}`);
+    let datumTekst = today.toLocaleDateString("nl-NL", {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+    });
+    datumTekst = datumTekst.charAt(0).toLowerCase() + datumTekst.slice(1);
+    el.textContent = `Het is nu ${datumTekst}`;
+}
 /* ---------------- START ---------------- */
+renderToday();
 loadData().then(matches => {
     renderTable(matches);
 });
