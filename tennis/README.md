@@ -2,7 +2,9 @@
 
 Kleine front-end demo die wedstrijden uit `schema.txt` laadt, toont in een tabel, en filtert op tennis/padel.
 
-**Live (Firebase Hosting):** [https://tennisschema.web.app](https://tennisschema.web.app)
+**Live (Firebase Hosting):** [https://tennisschema-a2d3c.web.app/](https://tennisschema-a2d3c.web.app/)
+
+Firebase project-ID: `tennisschema-a2d3c` (zie `.firebaserc`).
 
 ## Bestanden
 
@@ -75,7 +77,7 @@ Aanbevolen keuzes:
 
 | Vraag | Antwoord |
 |--------|----------|
-| Project | Bestaand project (bijv. `tennisschema-…`) |
+| Project | Bestaand project (`tennisschema-a2d3c`) |
 | Public directory | **`.`** (huidige map, niet `public`) |
 | Single-page app | **No** |
 | GitHub auto-deploy | **No** |
@@ -95,9 +97,9 @@ Daarna in de browser **hard refresh** (`Ctrl+F5`), anders zie je soms nog oude `
 
 ### Controleren
 
-- Planning: `https://tennisschema.web.app/`
-- Data direct: `https://tennisschema.web.app/schema.txt`
-- Editor: `https://tennisschema.web.app/schema-editor.html`
+- Planning: [https://tennisschema-a2d3c.web.app/](https://tennisschema-a2d3c.web.app/)
+- Data direct: [https://tennisschema-a2d3c.web.app/schema.txt](https://tennisschema-a2d3c.web.app/schema.txt)
+- Editor: [https://tennisschema-a2d3c.web.app/schema-editor.html](https://tennisschema-a2d3c.web.app/schema-editor.html)
 
 ## GitHub
 
