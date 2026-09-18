@@ -63,3 +63,4 @@
 2026-12-12,John en Wim,padel
 2026-12-17,Wim en Ron Z,tennis
 2026-12-19,Niels en Ron de R,padel
+2027-01-02,Wim en Ron Z,padel
